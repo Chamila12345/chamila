@@ -80,8 +80,24 @@
     color:var(--ink-soft);
     text-decoration:none;
     font-weight:500;
+    margin-right:14px;
   }
+  .topbar nav a:last-child{margin-right:0;}
   .topbar nav a:hover{color:var(--teal-deep);}
+  @media (max-width:640px){
+    .topbar{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:12px;
+      padding:16px 0;
+    }
+    .topbar nav{
+      gap:14px;
+      flex-wrap:wrap;
+      width:100%;
+    }
+    .topbar nav a{font-size:13px;}
+  }
 
   /* ---- Hero / report header ---- */
   .report-header{
@@ -102,6 +118,11 @@
     color:var(--teal-deep);
     margin-top:8px;
     font-weight:500;
+  }
+  @media (max-width:640px){
+    .report-header{padding:36px 0 24px;}
+    .report-header h1{font-size:32px;}
+    .report-header .role{font-size:16px;}
   }
   .meta-table{
     margin-top:32px;
@@ -205,6 +226,12 @@
     padding:20px 22px;
     cursor:pointer;
     user-select:none;
+  }
+  @media (max-width:640px){
+    .case-head{padding:16px 16px; flex-wrap:wrap;}
+    .case-body{padding:0 16px;}
+    .case.open .case-body{padding-bottom:16px;}
+    section{padding:36px 0;}
   }
   .case-id{
     font-family:'IBM Plex Mono',monospace;
@@ -311,7 +338,7 @@
 <div class="shell">
 
   <div class="topbar">
-    <div class="mark">CHAMILA DHANANJAYA</div>
+    <div class="mark">C. DHANANJAYA</div>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -323,7 +350,7 @@
   </div>
 
   <header class="report-header" id="about">
-  <div class="kicker mono">Quality Assurance —  Profile</div>
+    <div class="kicker mono">Quality Assurance — Candidate Profile</div>
     <h1>Chamila Dhananjaya</h1>
     <div class="role">QA Engineer — building reliability into software, one test case at a time.</div>
 
@@ -512,7 +539,7 @@
   <section id="education">
     <div class="section-head">
       <h2>Education Path</h2>
-      <span class="section-note">Java Institute for Advanced Technology, affiliated with Birmingham City University</span>
+      <span class="section-note">Birmingham City University, delivered via Java Institute for Advanced Technology</span>
     </div>
 
     <div class="cert-row">
