@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chamila Dhananjaya — QA Engineer</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -123,6 +125,23 @@
     .report-header{padding:36px 0 24px;}
     .report-header h1{font-size:32px;}
     .report-header .role{font-size:16px;}
+  }
+  .name-row{
+    display:flex;
+    align-items:center;
+    gap:22px;
+  }
+  .avatar{
+    width:92px;
+    height:92px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--rule);
+    flex:none;
+  }
+  @media (max-width:640px){
+    .name-row{gap:14px;}
+    .avatar{width:64px; height:64px;}
   }
   .meta-table{
     margin-top:32px;
@@ -351,8 +370,13 @@
 
   <header class="report-header" id="about">
     <div class="kicker mono">Quality Assurance — Candidate Profile</div>
-    <h1>Chamila Dhananjaya</h1>
-    <div class="role">QA Engineer — building reliability into software, one test case at a time.</div>
+    <div class="name-row">
+      <img class="avatar" src="assets/avatar.jpg" alt="Chamila Dhananjaya">
+      <div>
+        <h1>Chamila Dhananjaya</h1>
+        <div class="role">QA Engineer — building reliability into software, one test case at a time.</div>
+      </div>
+    </div>
 
     <div class="meta-table">
       <div>
@@ -391,7 +415,6 @@
         <h3>Testing Techniques</h3>
         <ul class="skill-list">
           <li><span class="checkmark"></span>Manual &amp; black box testing</li>
-          <li><span class="checkmark"></span>API testing</li>
           <li><span class="checkmark"></span>Functional &amp; regression testing</li>
           <li><span class="checkmark"></span>Smoke testing &amp; UAT</li>
           <li><span class="checkmark"></span>Cross-browser testing</li>
